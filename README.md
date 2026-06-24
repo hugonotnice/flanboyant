@@ -100,4 +100,38 @@ Quick options to deploy to any static host:
 
 ---
 
+## Git Versioning & Deployment Best Practices
+
+To maintain the high-quality editorial aesthetic, codebase performance, and clean version history, adhere to the following best practices on GitHub:
+
+### 1. GitHub Versioning & Git Workflow
+
+- **Branch Protection:** 
+  - Once the site is in production, avoid pushing experimental or unvetted changes directly to `main`.
+  - Use feature/fix branches (e.g., `feature/contact-form`, `fix/typo-terms`) and merge via **Pull Requests (PRs)** after testing.
+- **Conventional Commits:** 
+  - Keep commits precise, clear, and conventional to allow easy backtracking.
+  - Examples:
+    - `feat: add dual-audience mode switch and candidate copy`
+    - `fix: correct alignment on right panels under 420px container query`
+    - `docs: write production deployment guides and dns guidelines`
+- **Semantic Versioning (SemVer):**
+  - Continue using the `MAJOR.MINOR.PATCH` versioning format for brand snapshots inside `BRAND_SYSTEM.md` and release tags on GitHub.
+  - Increment the *Minor* version for new visual patterns (like adding the Mode Switch in `v1.4.0`) and *Patch* for simple copy adjustments or styling fixes.
+- **Visual Logs (`CHANGELOG.md`):**
+  - Always log any change inside `CHANGELOG.md` using the established category tags: `[BRAND]`, `[LAYOUT]`, `[CONTENT]`, `[SEO]`, or `[FIX]`.
+
+### 2. Performance & Deployment Optimization
+
+- **Continuous Deployment (CI/CD):**
+  - Link your GitHub repository directly to Vercel or Cloudflare Pages.
+  - This automates production deployment on every commit pushed to `main` and generates **automatic staging/preview URLs** for your pull requests. This lets you inspect visual changes live before merging.
+- **Zero-Build/No-Dependency Integrity:**
+  - The project is intentionally designed with zero dependencies, build pipelines, or bundling setups to achieve sub-second page loads.
+  - Avoid introducing heavy npm packages, Webpack configurations, or third-party JS frameworks unless absolutely requested. Keep the code pure vanilla HTML and CSS.
+- **Asset Optimization:**
+  - Before uploading new visual assets (like `og-image.png` or icons), compress them using modern tools (such as TinyPNG or squoosh.app) to keep file sizes under 150KB and preserve extreme load speeds.
+
+---
+
 *Last brand snapshot: 2026-06-24. See [`BRAND_SYSTEM.md`](./BRAND_SYSTEM.md) for full design documentation.*
