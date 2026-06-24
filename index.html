@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="candidates">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flanboyant — founding teams</title>
+    <meta name="description" content="flanboyant is the premier founder-to-founder talent partner for elite seed and Series A startups. We secure high-signal founding engineers, GTM leaders, and chiefs of staff with zero recruitment overhead." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://flanboyant.com" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://flanboyant.com" />
+    <meta property="og:title" content="flanboyant — founding teams" />
+    <meta property="og:description" content="flanboyant is the premier founder-to-founder talent partner for elite seed and Series A startups. We secure high-signal founding engineers, GTM leaders, and chiefs of staff with zero recruitment overhead." />
+    <meta property="og:image" content="https://flanboyant.com/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://flanboyant.com" />
+    <meta property="twitter:title" content="flanboyant — founding teams" />
+    <meta property="twitter:description" content="flanboyant is the premier founder-to-founder talent partner for elite seed and Series A startups. We secure high-signal founding engineers, GTM leaders, and chiefs of staff with zero recruitment overhead." />
+    <meta property="twitter:image" content="https://flanboyant.com/og-image.png" />
+
+    <!-- Inline SVG Favicon (Swiss Sharp Rect + Letter F) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0UwMkQxQiIvPjx0ZXh0IHg9IjUwIiB5PSI1NSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iNjUiIGZpbGw9IiNGRkZGRkYiPkY8L3RleHQ+PC9zdmc+" />
+
+    <!-- Import clean modernist Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ─── LAYER ORDER ────────────────────────────────────────────────── */
+        @layer reset, tokens, layout, components, utilities;
+
+        /* ─── RESET ─────────────────────────────────────────────────────── */
+        @layer reset {
+            *, *::before, *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                border-radius: 0 !important;
+                overflow-wrap: break-word;
+            }
+            /* Prevent flex/grid children from overflowing their track */
+            img, video, svg { max-inline-size: 100%; }
+        }
+
+        /* ─── TOKENS ─────────────────────────────────────────────────────── */
+        @layer tokens {
+            :root {
+                /* Brand palette */
+                --bg:               #FAFAFA;
+                --surface:          #F2EBEA;
+                --text-main:        #1A1A1A;
+                --text-muted:       #5A5A57;
+                --border-sharp:     #1A1A1A;
+                --flanboyant-fire:  #E02D1B;
+                --font-main:        "Helvetica Neue", "Inter", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+
+                /* Default / Mobile tokens (static) */
+                --space-xs: 8px;
+                --space-sm: 16px;
+                --space-md: 24px;
+                --space-lg: 32px;
+                --space-xl: 48px;
+
+                --space-x-sm: 16px;
+                --space-x-md: 24px;
+                --space-x-lg: 32px;
+                --space-x-xl: 48px;
+
+                /* Standardized Type Scale */
+                --fs-eyebrow: clamp(10px, 1vw, 11px);
+                --fs-desc:    clamp(13px, 1.5vw, 15px);
+                --fs-num:     clamp(12px, 1.3vw, 13px);
+                --fs-title:   clamp(14px, 1.5vw, 15px);
+                --fs-sub:     clamp(12px, 1.3vw, 13px);
+            }
+
+            @media (min-width: 768px) {
+                :root {
+                    /* Desktop height-based and width-based tokens */
+                    --space-xs: clamp(6px, 0.8vh, 8px);
+                    --space-sm: clamp(10px, 1.5vh, 16px);
+                    --space-md: clamp(16px, 2.5vh, 24px);
+                    --space-lg: clamp(20px, 3.5vh, 32px);
+                    --space-xl: clamp(24px, 4.5vh, 48px);
+
+                    --space-x-sm: clamp(12px, 2vw, 16px);
+                    --space-x-md: clamp(16px, 3vw, 24px);
+                    --space-x-lg: clamp(20px, 4vw, 32px);
+                    --space-x-xl: clamp(24px, 5vw, 48px);
+                }
+            }
+        }
+
+        /* ─── LAYOUT ─────────────────────────────────────────────────────── */
+        @layer layout {
+            html {
+                background-color: var(--bg);
+                color: var(--text-main);
+                font-family: var(--font-main);
+                letter-spacing: -0.02em;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                min-block-size: 100dvb;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                min-block-size: 100dvb;
+            }
+
+            header {
+                display: flex;
+                align-items: center;
+                background: var(--bg);
+                border-bottom: 2px solid var(--border-sharp);
+                padding-block: var(--space-sm);
+                padding-inline: var(--space-x-xl);
+                position: sticky;
+                top: 0;
+                z-index: 10;
+            }
+
+            .header-inner {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                inline-size: 100%;
+                flex-wrap: wrap;
+                gap: var(--space-xs);
+            }
+
+            main {
+                flex: 1;
+                display: grid;
+                grid-template-columns: minmax(min(280px, 100%), 1.15fr)
+                                       minmax(min(280px, 100%), 1fr);
+                align-items: stretch;
+            }
+
+            .left-col {
+                container: left-col / inline-size;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: var(--space-xl);
+                padding-block: var(--space-xl);
+                padding-inline: var(--space-x-xl);
+                border-right: 2px solid var(--border-sharp);
+                min-inline-size: 0;
+            }
+
+            .right-col {
+                container: right-col / inline-size;
+                display: flex;
+                flex-direction: column;
+                min-inline-size: 0;
+            }
+
+            @media (max-width: 767px) {
+                main { grid-template-columns: 1fr; }
+                .left-col {
+                    border-right: none;
+                    border-bottom: 2px solid var(--border-sharp);
+                    padding-block: var(--space-lg);
+                    padding-inline: var(--space-x-md);
+                    justify-content: flex-start;
+                    gap: var(--space-lg);
+                }
+                header {
+                    position: static;
+                    padding-inline: var(--space-x-md);
+                }
+            }
+
+            @media (min-width: 768px) {
+                html, body { height: 100dvb; overflow: hidden; }
+                main { height: 0; overflow: hidden; }
+                .left-col  { height: 100%; overflow-y: auto; }
+                .right-col { height: 100%; overflow-y: auto; }
+                .section-panel { overflow: visible; }
+                header { height: clamp(60px, 8vh, 80px); }
+                footer { height: clamp(40px, 6vh, 56px); }
+            }
+        }
+
+        /* ─── COMPONENTS ─────────────────────────────────────────────────── */
+        @layer components {
+
+            /* ── LOGO ── */
+            .logo-area { display: flex; align-items: center; gap: var(--space-xs); }
+            .logo-dot {
+                inline-size: clamp(10px, 1.2vw, 14px);
+                block-size:  clamp(10px, 1.2vw, 14px);
+                background-color: var(--flanboyant-fire);
+                flex-shrink: 0;
+            }
+            .logo-text {
+                font-size: clamp(20px, 2.5vw, 26px);
+                font-weight: 800;
+                letter-spacing: -0.05em;
+                color: var(--text-main);
+                text-transform: lowercase;
+                white-space: nowrap;
+            }
+
+            /* ── MODE SWITCH ── */
+            .mode-switch {
+                display: flex;
+                align-items: center;
+                border: 2px solid var(--border-sharp);
+                overflow: hidden;
+            }
+
+            .mode-btn {
+                font-size: clamp(10px, 1.1vw, 12px);
+                font-weight: 700;
+                color: var(--text-muted);
+                background: transparent;
+                border: none;
+                padding-block:  clamp(6px, 1vh, 10px);
+                padding-inline: clamp(14px, 2vw, 22px);
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+                cursor: pointer;
+                transition: background 0.15s, color 0.15s;
+                white-space: nowrap;
+                position: relative;
+            }
+
+            .mode-btn + .mode-btn {
+                border-left: 2px solid var(--border-sharp);
+            }
+
+            .mode-btn.active {
+                background: var(--text-main);
+                color: #FFFFFF;
+            }
+
+            .mode-btn:not(.active):hover {
+                background: var(--surface);
+                color: var(--text-main);
+            }
+
+            /* ── HEADER LINK ── */
+            .header-link {
+                font-size: clamp(11px, 1.2vw, 13px);
+                font-weight: 700;
+                color: var(--text-main);
+                text-decoration: none;
+                border: 2px solid var(--border-sharp);
+                padding: var(--space-xs) var(--space-sm);
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                transition: background 0.15s, color 0.15s, border-color 0.15s;
+                background: transparent;
+                white-space: nowrap;
+            }
+            .header-link:hover {
+                background-color: var(--flanboyant-fire);
+                color: #FFFFFF;
+                border-color: var(--flanboyant-fire);
+            }
+
+            /* ── HERO ── */
+            .hero-block {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-md);
+                min-inline-size: 0;
+            }
+
+            .hero-title {
+                font-size: clamp(36px, 4.8vw, 64px);
+                font-weight: 800;
+                line-height: 0.95;
+                letter-spacing: -0.05em;
+                color: var(--text-main);
+                text-wrap: balance;
+            }
+            .hero-title span { color: var(--flanboyant-fire); }
+
+            .hero-desc {
+                font-size: clamp(14px, 1.5vw, 17px);
+                color: var(--text-muted);
+                line-height: 1.45;
+                max-inline-size: 56ch;
+                letter-spacing: -0.01em;
+                min-inline-size: 0;
+            }
+
+            .cta-container { margin-block-start: var(--space-sm); }
+
+            .big-cta {
+                display: inline-flex;
+                align-items: center;
+                background: var(--text-main);
+                color: #FFFFFF;
+                text-decoration: none;
+                padding-block:  clamp(12px, 2vh, 18px);
+                padding-inline: clamp(24px, 3vw, 40px);
+                font-weight: 700;
+                font-size: clamp(11px, 1.2vw, 13px);
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                transition: background 0.15s;
+                white-space: nowrap;
+            }
+            .big-cta:hover { background: var(--flanboyant-fire); }
+
+            /* ── ECOSYSTEM ── */
+            .ecosystem-container {
+                border-top: 2px solid var(--border-sharp);
+                padding-block-start: var(--space-md);
+                min-inline-size: 0;
+            }
+            .ecosystem-title {
+                font-size: clamp(9px, 1vw, 11px);
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                color: var(--flanboyant-fire);
+                margin-block-end: var(--space-sm);
+                font-weight: 700;
+            }
+            .logo-row { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+            .logo-badge {
+                border: 1px solid var(--border-sharp);
+                padding-block:  clamp(4px, 0.8vh, 8px);
+                padding-inline: clamp(10px, 1vw, 14px);
+                font-size: clamp(10px, 1.1vw, 12px);
+                font-weight: 600;
+                color: var(--text-main);
+                background: var(--surface);
+                transition: background 0.15s, color 0.15s;
+                cursor: default;
+                white-space: nowrap;
+                text-box: trim-both cap alphabetic;
+            }
+            .logo-badge:hover { background-color: var(--text-main); color: #FFFFFF; }
+
+            /* ── PANELS ── */
+            .section-panel {
+                container: panel / inline-size;
+                padding-block:  var(--space-lg);
+                padding-inline: var(--space-x-xl);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                min-inline-size: 0;
+                border-bottom: 2px solid var(--border-sharp);
+            }
+            .section-panel:last-child { border-bottom: none; }
+
+            .panel-label {
+                font-size: var(--fs-eyebrow);
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: .08em;
+                color: var(--flanboyant-fire);
+                margin-block-end: clamp(10px, 1.6vh, 16px);
+            }
+            .panel-desc {
+                font-size: var(--fs-desc);
+                font-weight: 500;
+                line-height: 1.45;
+                color: var(--text-main);
+                max-inline-size: 62ch;
+                margin-block-end: clamp(16px, 2.5vh, 24px);
+            }
+            .panel-cols {
+                display: grid;
+                grid-template-columns: 1fr auto 1fr;
+                gap: 0 var(--space-x-lg);
+                align-items: start;
+            }
+            .panel-divider {
+                inline-size: 2px;
+                background: var(--border-sharp);
+                align-self: stretch;
+            }
+            .col {
+                display: flex;
+                flex-direction: column;
+                gap: clamp(10px, 1.6vh, 16px);
+                min-inline-size: 0;
+            }
+            .col-heading {
+                font-size: var(--fs-eyebrow);
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: .06em;
+                color: var(--text-muted);
+            }
+            .item {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                min-inline-size: 0;
+            }
+            .item-num   { font-size: var(--fs-num); font-weight: 700; color: var(--flanboyant-fire); }
+            .item-title { font-size: var(--fs-title); font-weight: 700; letter-spacing: -.02em; line-height: 1.3; }
+            .item-sub   { font-size: var(--fs-sub); font-weight: 400; color: var(--text-muted); line-height: 1.45; }
+            .why-item   { font-size: var(--fs-sub); font-weight: 500; color: var(--text-main); line-height: 1.45; }
+
+            @container panel (max-width: 420px) {
+                .panel-cols { grid-template-columns: 1fr; gap: var(--space-md) 0; }
+                .panel-divider { inline-size: 100%; block-size: 1px; }
+            }
+
+            /* ── FOOTER ── */
+            footer {
+                background: #1A1A1A;
+                color: #7A7A78;
+                display: flex;
+                align-items: center;
+                padding-block:  0;
+                padding-inline: var(--space-x-xl);
+                font-size: clamp(9px, 1.1vw, 11px);
+                font-weight: 500;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+            .footer-inner {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                inline-size: 100%;
+                flex-wrap: wrap;
+                gap: var(--space-xs);
+            }
+            .footer-left { display: flex; align-items: center; gap: var(--space-sm); }
+            .footer-dot { inline-size: 6px; block-size: 6px; background-color: var(--flanboyant-fire); flex-shrink: 0; }
+            .footer-center { font-weight: 700; color: #FFFFFF; text-wrap: balance; }
+            .footer-right { display: flex; align-items: center; gap: var(--space-sm); }
+            .footer-link { color: #7A7A78; text-decoration: none; transition: color 0.15s; }
+            .footer-link:hover { color: #FFFFFF; }
+
+            @media (max-width: 767px) {
+                footer { padding-inline: var(--space-x-md); padding-block: var(--space-md); }
+            }
+
+            /* ─────────────────────────────────────────────────────────────
+               MODE VISIBILITY
+               [data-mode="candidates"] → show candidate blocks
+               [data-mode="startups"]   → show startup blocks
+            ───────────────────────────────────────────────────────────── */
+            .for-candidates,
+            .for-startups {
+                transition: opacity 0.2s ease;
+            }
+
+            /* hide startup content when in candidates mode */
+            [data-mode="candidates"] .for-startups { display: none; }
+            /* hide candidate content when in startups mode */
+            [data-mode="startups"]   .for-candidates { display: none; }
+        }
+
+        @layer utilities {
+            @media (prefers-reduced-motion: reduce) {
+                *, *::before, *::after {
+                    transition-duration: 0.01ms !important;
+                    animation-duration:  0.01ms !important;
+                }
+            }
+            @media (min-width: 768px) and (max-height: 680px) {
+                .hero-desc {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .item-sub {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo-area">
+                <div class="logo-dot"></div>
+                <div class="logo-text">flanboyant</div>
+            </div>
+
+            <!-- MODE SWITCH -->
+            <div class="mode-switch" role="group" aria-label="View mode">
+                <button class="mode-btn active" id="btn-candidates" onclick="setMode('candidates')">Candidates</button>
+                <button class="mode-btn"        id="btn-startups"   onclick="setMode('startups')">Startups</button>
+            </div>
+
+            <!-- CTA changes per mode -->
+            <a href="https://wa.me/5511999999999" class="header-link for-candidates" target="_blank">Apply Now ↗</a>
+            <a href="https://wa.me/5511999999999" class="header-link for-startups"   target="_blank">Message Us ↗</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ═══════════════════ LEFT COLUMN ═══════════════════ -->
+        <div class="left-col">
+
+            <!-- CANDIDATES hero -->
+            <div class="hero-block for-candidates">
+                <h1 class="hero-title">The move that defines the <span>rest of your career.</span></h1>
+                <p class="hero-desc">
+                    We match high-signal operators with the founding teams building the next generation of breakout companies. One role. Real equity. Direct line to the founder.
+                </p>
+                <div class="cta-container">
+                    <a href="https://wa.me/5511999999999" class="big-cta" target="_blank">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- STARTUPS hero -->
+            <div class="hero-block for-startups">
+                <h1 class="hero-title">The talent partner for your core <span>founding team.</span></h1>
+                <p class="hero-desc">
+                    We operate founder-to-founder to secure high-signal human capital for elite seed and Series A ventures. No recruiting overhead. Direct cap-table alignment.
+                </p>
+                <div class="cta-container">
+                    <a href="https://wa.me/5511999999999" class="big-cta" target="_blank">Message Us</a>
+                </div>
+            </div>
+
+            <!-- ECOSYSTEM (shared) -->
+            <div class="ecosystem-container">
+                <div class="ecosystem-title for-candidates">Alumni From</div>
+                <div class="ecosystem-title for-startups">Networks</div>
+                <div class="logo-row">
+                    <span class="logo-badge">Y Combinator</span>
+                    <span class="logo-badge">500 Startups</span>
+                    <span class="logo-badge">Cubo Itaú</span>
+                    <span class="logo-badge">Stripe</span>
+                    <span class="logo-badge">Plaid</span>
+                    <span class="logo-badge">Brex</span>
+                    <span class="logo-badge">Vercel</span>
+                    <span class="logo-badge">Figma</span>
+                    <span class="logo-badge">Notion</span>
+                    <span class="logo-badge">OpenAI</span>
+                    <span class="logo-badge">Airbnb</span>
+                    <span class="logo-badge">Uber</span>
+                    <span class="logo-badge">Coinbase</span>
+                    <span class="logo-badge">Revolut</span>
+                    <span class="logo-badge">HashiCorp</span>
+                    <span class="logo-badge">Snowflake</span>
+                    <span class="logo-badge">Datadog</span>
+                    <span class="logo-badge">Linear</span>
+                    <span class="logo-badge">Retool</span>
+                    <span class="logo-badge">Deel</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════ RIGHT COLUMN ═══════════════════ -->
+        <div class="right-col">
+
+            <!-- ─────────────── CANDIDATES panels ─────────────── -->
+
+            <!-- C1: THE ROLES -->
+            <div class="section-panel for-candidates">
+                <div class="panel-label">The Roles</div>
+                <p class="panel-desc">Six founding-level mandates. Each one the kind of move that reshapes a career — not just a next job.</p>
+                <div class="panel-cols">
+                    <div class="col">
+                        <div class="item"><span class="item-num">01 /</span><span class="item-title">Founding Engineer</span><span class="item-sub">Own the architecture from commit one. Real equity. Real ownership.</span></div>
+                        <div class="item"><span class="item-num">02 /</span><span class="item-title">Founding AE / GTM Lead</span><span class="item-sub">Build the first pipeline. Close the first deals. Shape the playbook.</span></div>
+                        <div class="item"><span class="item-num">03 /</span><span class="item-title">Chief of Staff</span><span class="item-sub">Run the org alongside the founder. Total visibility from day one.</span></div>
+                    </div>
+                    <div class="panel-divider"></div>
+                    <div class="col">
+                        <div class="item"><span class="item-num">04 /</span><span class="item-title">Head of People</span><span class="item-sub">Set the hiring bar and culture before anyone else does.</span></div>
+                        <div class="item"><span class="item-num">05 /</span><span class="item-title">Founding Designer</span><span class="item-sub">Own product and brand identity from v1.</span></div>
+                        <div class="item"><span class="item-num">06 /</span><span class="item-title">Founding PM</span><span class="item-sub">Ship the first roadmap. No committee. No bureaucracy.</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- C2: WHAT YOU GET -->
+            <div class="section-panel for-candidates">
+                <div class="panel-label">What You Get</div>
+                <p class="panel-desc">This isn't a lateral move. It's the bet-on-yourself moment — with the comp and equity to match.</p>
+                <div class="panel-cols">
+                    <div class="col">
+                        <div class="col-heading">What This Isn't</div>
+                        <p class="why-item">A corporate ladder climb.</p>
+                        <p class="why-item">A 2% annual raise cycle.</p>
+                        <p class="why-item">A role where someone else owns the roadmap.</p>
+                        <p class="why-item">Another recruiter spamming your inbox.</p>
+                    </div>
+                    <div class="panel-divider"></div>
+                    <div class="col">
+                        <div class="col-heading">What It Is</div>
+                        <p class="why-item">$150k+ base floor. Real equity upside.</p>
+                        <p class="why-item">Direct line to the founder, not to HR.</p>
+                        <p class="why-item">Work trial before you commit — no black holes.</p>
+                        <p class="why-item">A reference that opens every next door.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- C3: WHO WE PLACE -->
+            <div class="section-panel for-candidates">
+                <div class="panel-label">Who We Place</div>
+                <p class="panel-desc">We screen for builders, not titles. If you've shipped something real and measurable, we want to talk.</p>
+                <div class="panel-cols">
+                    <div class="col">
+                        <div class="item"><span class="item-num">01 /</span><span class="item-title">Track Record of Shipped Work</span><span class="item-sub">Demonstrable output — code, revenue, product, culture. Not tenure.</span></div>
+                        <div class="item"><span class="item-num">02 /</span><span class="item-title">Ownership Mentality</span><span class="item-sub">You've taken a problem from zero to working, without being asked twice.</span></div>
+                    </div>
+                    <div class="panel-divider"></div>
+                    <div class="col">
+                        <div class="item"><span class="item-num">03 /</span><span class="item-title">Startup-Ready</span><span class="item-sub">Either you've been in a fast-moving environment, or you're built for one.</span></div>
+                        <div class="item"><span class="item-num">04 /</span><span class="item-title">Long-term Thinker</span><span class="item-sub">You want equity, not just a salary. You're thinking in decades.</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- C4: HOW IT WORKS -->
+            <div class="section-panel for-candidates">
+                <div class="panel-label">How It Works</div>
+                <p class="panel-desc">Four steps. No funnel. No black hole. You talk to us once — then directly to the founder.</p>
+                <div class="panel-cols">
+                    <div class="col">
+                        <div class="item"><span class="item-num">01 /</span><span class="item-title">You Reach Out</span><span class="item-sub">A 30-min call with us. No resume required to start.</span></div>
+                        <div class="item"><span class="item-num">02 /</span><span class="item-title">We Match You</span><span class="item-sub">1–2 introductions to founders. Handpicked, not a pipeline blast.</span></div>
+                    </div>
+                    <div class="panel-divider"></div>
+                    <div class="col">
+                        <div class="item"><span class="item-num">03 /</span><span class="item-title">Work Trial</span><span class="item-sub">1–5 day paid trial on real scope. You evaluate them too.</span></div>
+                        <div class="item"><span class="item-num">04 /</span><span class="item-title">Signed Offer</span><span class="item-sub">Comp, equity, relocation and visa support as needed.</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─────────────── STARTUPS panels ─────────────── -->
+
+            <!-- S1: FOUNDING MANDATES -->
+            <div class="section-panel for-startups">
+                <div class="panel-label">Founding Mandates</div>
+                <p class="panel-desc">Six roles we place across the founding bench, each sourced against a track record of shipped, measurable work.</p>
+                <div class="panel-cols">
+                    <div class="col">
+                        <div class="item"><span class="item-num">01 /</span><span class="item-title">Founding Engineer</span><span class="item-sub">Owns architecture from commit one.</span></div>
+                        <div class="item"><span class="item-num">02 /</span><span class="item-title">Founding AE / GTM Lead</span><span class="item-sub">Builds and closes the first pipeline.</span></div>
+                        <div class="item"><span class="item-num">03 /</span><span class="item-title">Chief of Staff</span><span class="item-sub">Extends founder bandwidth across the org.</span></div>
+                    </div>
+                    <div class="panel-divider"></div>
+                    <div class="col">
+                        <div class="item"><span class="item-num">04 /</span><span class="item-title">Head of People</span><span class="item-sub">Sets comp, hiring bar, and culture early.</span></div>
+                        <div class="item"><span class="item-num">05 /</span><span class="item-title">Founding Designer</span><span class="item-sub">Owns product and brand from v1.</span></div>
+                        <div class="item"><span class="item-num">06 /</span><span class="item-title">Founding PM</span><span class="item-sub">Sets the first roadmap and ships it.</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- S2: WHY US -->
+            <div class="section-panel for-startups">
+                <div class="panel-label">Why Us</div>
+                <p class="panel-desc">Generalist agencies optimize for resume volume. We screen exclusively for proven execution and shipping speed.</p>
+                <div class="panel-cols">
+                    <div class="col">
+                        <div class="col-heading">We Don't Send You</div>
+                        <p class="why-item">Mass CV pipelines.</p>
+                        <p class="why-item">Serial corporate job-hoppers.</p>
+                        <p class="why-item">Candidates outside your comp band.</p>
+                    </div>
+                    <div class="panel-divider"></div>
+                    <div class="col">
+                        <div class="col-heading">You Get</div>
+                        <p class="why-item">A vetted shortlist, not a funnel.</p>
+                        <p class="why-item">Reference-checked execution history.</p>
+                        <p class="why-item">Direct cap-table alignment with you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- S3: PIPELINE -->
+            <div class="section-panel for-startups">
+                <div class="panel-label">Pipeline</div>
+                <p class="panel-desc">Five stages from sourcing to signed offer, run in parallel with your own interview process.</p>
+                <div class="panel-cols">
+                    <div class="col">
+                        <div class="item"><span class="item-num">01 /</span><span class="item-title">Sourcing</span><span class="item-sub">Targeted outreach into our networks.</span></div>
+                        <div class="item"><span class="item-num">02 /</span><span class="item-title">Shortlist</span><span class="item-sub">3–4 vetted, reference-checked candidates.</span></div>
+                        <div class="item"><span class="item-num">03 /</span><span class="item-title">Interview Loop</span><span class="item-sub">Runs on your team's process.</span></div>
+                    </div>
+                    <div class="panel-divider"></div>
+                    <div class="col">
+                        <div class="item"><span class="item-num">04 /</span><span class="item-title">Work Trial</span><span class="item-sub">1–5 day paid trial on real scope.</span></div>
+                        <div class="item"><span class="item-num">05 /</span><span class="item-title">Offer &amp; Close</span><span class="item-sub">Comp, equity, relocation and visa support.</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- S4: OUR TERMS -->
+            <div class="section-panel for-startups">
+                <div class="panel-label">Our Terms</div>
+                <p class="panel-desc">Contingency-based, transparent fee structure. You pay only on a signed offer.</p>
+                <div class="panel-cols">
+                    <div class="col">
+                        <div class="item"><span class="item-title">15% · 25%</span><span class="item-sub">Placement fee — remote · in-person</span></div>
+                        <div class="item"><span class="item-title">$150k</span><span class="item-sub">Minimum base salary covered</span></div>
+                        <div class="item"><span class="item-title">Net 30</span><span class="item-sub">Invoice payment window</span></div>
+                    </div>
+                    <div class="panel-divider"></div>
+                    <div class="col">
+                        <div class="item"><span class="item-title">90 Days</span><span class="item-sub">Free replacement guarantee</span></div>
+                        <div class="item"><span class="item-title">Up to 1/3</span><span class="item-sub">Of fee payable in equity</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="footer-dot"></div>
+                <span>&copy; 2026 flanboyant. All rights reserved.</span>
+            </div>
+            <div class="footer-center for-candidates">
+                <span>SF &amp; Remote &bull; $150K Base Floor &bull; Real Equity Upside</span>
+            </div>
+            <div class="footer-center for-startups">
+                <span>SF &amp; Remote Option &bull; $150K Base Floor &bull; 15% / 25% Fee Structure</span>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="footer-link">X</a>
+                <a href="#" class="footer-link">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function setMode(mode) {
+            document.documentElement.setAttribute('data-mode', mode);
+            document.getElementById('btn-candidates').classList.toggle('active', mode === 'candidates');
+            document.getElementById('btn-startups').classList.toggle('active', mode === 'startups');
+            // scroll both cols back to top on switch
+            document.querySelectorAll('.left-col, .right-col').forEach(el => el.scrollTop = 0);
+        }
+    </script>
+
+</body>
+</html>
